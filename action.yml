@@ -1,0 +1,31 @@
+name: "LegitSecurity CLI Action"
+description: "Scan commits for secrets."
+author: LegitSecurity <support@legitsecurity.com>
+
+inputs:
+  command:
+    description: the legit cli command to run
+    required: false
+    default: scan
+  token:
+    description: Legit's API Token
+    required: true
+  from:
+    description: the commit to start scanning from
+    required: true
+  to:
+    description: the commit to scan up to
+    required: true
+  min_severity:
+    description: minimum issue severity to display
+    required: false
+    default: Low
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.command }}
+    - ${{ inputs.token }}
+    - ${{ inputs.from }}
+    - ${{ inputs.to }}
+    - ${{ inputs.min_severity }}
