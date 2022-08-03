@@ -24,7 +24,7 @@ runs:
   using: "docker"
   image: "Dockerfile"
   env:
-    LEGIT_API_TOKEN: ${{ inputs.token }}
+    LEGIT_API_KEY: ${{ inputs.token }}
     COMMAND: ${{ inputs.command }}
     FROM_COMMIT: ${{ inputs.from }}
     TO_COMMIT: ${{ inputs.to }}
