@@ -1,10 +1,9 @@
 #!/bin/sh
 
 command=$1
-token=$2
-from=$3
-to=$4
-min_severity=$5
+from=$2
+to=$3
+min_severity=$3
 
 LEGIT_API_TOKEN=$token
 
