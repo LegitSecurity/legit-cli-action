@@ -1,4 +1,3 @@
 #!/bin/sh
-
-LEGIT_API_TOKEN=$LEGIT_API_TOKEN
-LEGIT_API_TOKEN=$LEGIT_API_TOKEN /legit $COMMAND --from=$FROM_COMMIT --to=$TO_COMMIT --min-severity=$MIN_SEV
+echo $LEGIT_API_TOKEN
+/legit $COMMAND --from=$FROM_COMMIT --to=$TO_COMMIT --min-severity=$MIN_SEV
