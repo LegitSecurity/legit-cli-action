@@ -23,10 +23,9 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  args:
-    - ${{ inputs.command }}
-    - ${{ inputs.from }}
-    - ${{ inputs.to }}
-    - ${{ inputs.min_severity }}
   env:
     LEGIT_API_TOKEN: ${{ inputs.token }}
+    COMMAND: ${{ inputs.command }}
+    FROM_COMMIT: ${{ inputs.from }}
+    TO_COMMIT: ${{ inputs.to }}
+    MIN_SEV: ${{ inputs.min_severity }}
