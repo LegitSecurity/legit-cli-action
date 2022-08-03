@@ -1,6 +1,6 @@
 FROM legitartifactsuser/legit
 
-COPY entrypoint.sh /entrypoint.sh
+COPY ./ ./
 
 RUN apk add git
 
