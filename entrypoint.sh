@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/bash
 
 command=$1
 token=$2
