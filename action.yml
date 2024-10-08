@@ -6,7 +6,7 @@ inputs:
   command:
     description: the legit cli command to run
     required: false
-    default: scan
+    default: 'scan range'
   token:
     description: Legit's API Token
     required: true
